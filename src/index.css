@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+.btn-primary {
+  @apply bg-green-800 cursor-pointer hover:bg-green-900 rounded px-3 py-[6px] text-white font-semibold transition duration-300 ease-in-out;
+}
+
+.btn-secondary {
+  @apply bg-orange-400 hover:bg-orange-500 rounded px-3 py-[6px] text-white font-semibold transition duration-300 ease-in-out;
+}
+
+.section-top {
+  @apply mt-8 md:mt-10 lg:mt-12 xl:mt-14
+}
+
+.section-bottom {
+  @apply mb-8 md:mb-10 lg:mb-12 xl:mb-14
+}
+
+.container-box {
+  @apply container mx-auto
+}
