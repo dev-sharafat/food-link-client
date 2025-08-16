@@ -27,8 +27,8 @@ const DashboardLayout = () => {
             { name: "Transaction History", path: "/dashboard/user/transaction-history" },
         ],
         restaurant: [
-            { name: "Add Donation", path: "/dashboard/restaurant/add-donation" },
             { name: "Restaurant Profile", path: "/dashboard/restaurant/profile" },
+            { name: "Add Donation", path: "/dashboard/restaurant/add-donation" },
             { name: "My Donations", path: "/dashboard/restaurant/my-donations" },
             { name: "Requested Donations", path: "/dashboard/restaurant/requested-donations" },
         ],
