@@ -27,8 +27,8 @@ const FeatureDonations = () => {
         return <LoadingComp />
     }
     return (
-        <section className="section-bottom">
-            <h2 className="text-2xl font-bold mb-6 lg:text-3xl ">Feature Donations</h2>
+        <section className="section-bottom min-h-screen dark:bg-gray-900 **:dark:text-white">
+            <h2 className="text-2xl font-bold mb-6 lg:text-3xl pl-4 pt-6 ">Feature Donations</h2>
             <div className="overflow-x-auto w-full ">
                 <table className="table w-full">
                     {/* Head */}

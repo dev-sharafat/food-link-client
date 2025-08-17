@@ -50,8 +50,8 @@ const RequestedDonations = () => {
         return <LoadingComp />
     }
     return (
-        <div className="p-6 max-w-8xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4">Requested Donations</h2>
+        <div className="p-6 min-h-screen dark:bg-gray-900 **:dark:text-white ">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-4">Requested Donations</h2>
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">
                     <thead>

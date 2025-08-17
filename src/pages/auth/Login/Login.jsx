@@ -51,7 +51,7 @@ const Login = () => {
     };
 
     return (
-        <div className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        <div className="relative min-h-[85vh] my-5 px-4 lg:px-0 flex items-center justify-center overflow-hidden">
 
             {/* Form Card */}
             <div className="relative z-10 w-full max-w-sm dark:bg-gray-600  backdrop-blur-sm bg-opacity-60 shadow-2xl rounded-lg p-6">
@@ -104,7 +104,7 @@ const Login = () => {
                     <p className='text-center dark:text-white'>or</p>
                     <Social />
 
-                    <p className="text-end pb-6 pr-10 dark:text-white">Don&apos;t have Account? <Link to="/register" className="font-bold underline">Create Account</Link> </p>
+                    <p className="text-center  dark:text-white">Don&apos;t have Account? <Link  to="/register" className="font-bold  underline">Create Account</Link> </p>
                 </form>
             </div>
         </div>

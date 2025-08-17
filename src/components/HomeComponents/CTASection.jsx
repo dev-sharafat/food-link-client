@@ -24,7 +24,7 @@ const CTASection = () => {
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           
-          <Link to="/dashboard/user/request-charity-role" className="btn btn-outline border-green-700 hover:bg-green-700  font-semibold rounded-lg shadow-lg transition-all duration-300">
+          <Link to="/dashboard/user/request-charity-role" className="btn btn-outline dark:text-black hover:text-white dark:bg-gray-300 border-green-700 hover:bg-green-700  font-semibold rounded-lg shadow-lg transition-all duration-300">
             Join as Charity
           </Link>
           

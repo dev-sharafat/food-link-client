@@ -83,11 +83,11 @@ const RestaurantDonations = () => {
     }
 
     return (
-        <div className="max-w-7xl mx-auto px-4 py-8">
-            <h2 className="text-3xl font-bold mb-6 text-center">My Donations</h2>
+        <div className="min-h-screen dark:bg-gray-900  px-4 py-8">
+            <h2 className="lg:text-4xl text-2xl font-bold mb-6 dark:text-white ">My Donations</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {donations.map((donation) => (
-                    <div key={donation._id} className="card bg-base-100 shadow-xl">
+                    <div key={donation._id} className="card bg-base-100 dark:bg-gray-600 **:dark:text-white shadow-xl">
                         <figure className="h-48">
                             <img
                                 src={donation.image}

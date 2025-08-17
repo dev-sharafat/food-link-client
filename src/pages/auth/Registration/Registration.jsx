@@ -77,7 +77,7 @@ const Registration = () => {
 
 
     return (
-        <div className="relative min-h-[85vh] flex items-center justify-center overflow-hidden ">
+        <div className="relative min-h-[85vh] my-5 px-4 lg:px-0 flex items-center justify-center overflow-hidden ">
 
 
             {/* Form Card */}

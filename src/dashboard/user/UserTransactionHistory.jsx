@@ -36,9 +36,9 @@ const UserTransactionHistory = () => {
 
     return (
         <>
-            <h2 className="text-2xl font-bold  text-center my-6">Transaction History</h2>
+            <h2 className="text-2xl font-bold  lg:text-3xl my-6">Transaction History</h2>
             <div className="overflow-x-auto">
-                <table className="table table-zebra w-full max-w-6xl mx-auto">
+                <table className="table table-zebra w-full ">
                     <thead className="bg-gray-200">
                         <tr>
                             <th>#</th>

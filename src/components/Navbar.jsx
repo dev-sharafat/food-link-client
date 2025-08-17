@@ -27,38 +27,17 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive
-              ? "text-green-600 font-semibold flex items-center gap-2"
-              : "text-gray-700 flex items-center gap-2"
-          }
-        >
+        <NavLink to="/" className="flex items-center gap-2">
           <FaHome /> Home
         </NavLink>
       </li>
       <li>
-        <NavLink
-          to="/all-donations"
-          className={({ isActive }) =>
-            isActive
-              ? "text-green-600 font-semibold flex items-center gap-2"
-              : "text-gray-700 flex items-center gap-2"
-          }
-        >
+        <NavLink to="/all-donations" className="flex items-center gap-2">
           <FaHandsHelping /> All Donations
         </NavLink>
       </li>
       <li>
-        <NavLink
-          to="/dashboard"
-          className={({ isActive }) =>
-            isActive
-              ? "text-green-600 font-semibold flex items-center gap-2"
-              : "text-gray-700 flex items-center gap-2"
-          }
-        >
+        <NavLink to="/dashboard" className="flex items-center gap-2">
           <FaTachometerAlt /> Dashboard
         </NavLink>
       </li>
@@ -89,7 +68,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content dark:bg-gray-400  dark:text-white text-black rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content dark:bg-gray-300  dark:text-white text-black rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               {navLinks}
             </ul>
@@ -102,8 +81,8 @@ const Navbar = () => {
             <img src={logo} className="w-full max-w-8" alt="" />
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="flex gap-4 px-1">{navLinks}</ul>
+        <div className="navbar-center hidden lg:flex dark:text-white">
+          <ul className="flex gap-4 px-1 dark:text-white ">{navLinks}</ul>
         </div>
         <div className="navbar-end ">
           <label className="swap swap-rotate pr-4">

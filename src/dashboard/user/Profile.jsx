@@ -3,12 +3,11 @@ import useRole from './../../hooks/useRole';
 
 const Profile = () => {
     const { data } = useRole()
-    
 
     return (
-        <section className="flex justify-center items-center">
+        <section className="dark:bg-gray-900 min-h-screen **:dark:text-white">
             {/* Header */}
-            <div className="max-w-3xl w-full mx-auto px-6 py-10">
+            <div className="mx-auto px-6 py-10">
                 <div className="flex justify-between items-center mb-8">
                     <h1 className="text-3xl font-bold">My Profile</h1>
                     <button className="btn btn-outline btn-primary gap-2">
@@ -17,7 +16,7 @@ const Profile = () => {
                 </div>
 
                 {/* Profile Card */}
-                <div className="card lg:card-side bg-base-100 shadow-xl border border-base-300 p-6 transition-all">
+                <div className="card lg:card-side bg-base-100 dark:bg-gray-600 shadow-xl  p-6 transition-all">
                     <div className="avatar flex justify-center lg:justify-start">
                         <div className="w-40 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                             <img

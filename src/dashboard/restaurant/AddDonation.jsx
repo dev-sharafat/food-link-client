@@ -58,89 +58,104 @@ const AddDonation = () => {
   };
 
   return (
-    <div className="   bg-white shadow-lg rounded-lg p-6">
-      <h2 className="text-2xl font-bold mb-4 text-center">Add Donation</h2>
-     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    {/* Donation Title */}
-    <div>
-      <label className="label font-semibold">Donation Title</label>
-      <input
-        className="input input-bordered w-full"
-        {...register("title", { required: "Donation title is required" })}
-        placeholder="e.g., Surplus Pastries"
-      />
-      {errors.title && <p className="text-red-500">{errors.title.message}</p>}
-    </div>
+    <div className="bg-white shadow-lg min-h-screen p-6 dark:bg-gray-900 **:">
+      <h2 className="text-2xl lg:text-4xl font-bold mb-10  dark:text-white">Add Donation</h2>
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 border dark:border-blue-900 p-4 rounded-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Donation Title */}
+          <div>
+            <label className="label font-semibold dark:text-white">Donation Title</label>
+            <input
+              className="input input-bordered w-full dark:text-white dark:bg-gray-600"
+              {...register("title", { required: "Donation title is required" })}
+              placeholder="e.g., Surplus Pastries"
+            />
+            {errors.title && (
+              <p className="text-red-500">{errors.title.message}</p>
+            )}
+          </div>
 
-    {/* Food Type */}
-    <div>
-      <label className="label font-semibold">Food Type</label>
-      <input
-        className="input input-bordered w-full"
-        {...register("foodType", { required: "Food type is required" })}
-        placeholder="e.g., Bakery, Produce"
-      />
-      {errors.foodType && <p className="text-red-500">{errors.foodType.message}</p>}
-    </div>
+          {/* Food Type */}
+          <div>
+            <label className="label font-semibold dark:text-white">Food Type</label>
+            <input
+              className="input input-bordered w-full dark:text-white dark:bg-gray-600"
+              {...register("foodType", { required: "Food type is required" })}
+              placeholder="e.g., Bakery, Produce"
+            />
+            {errors.foodType && (
+              <p className="text-red-500">{errors.foodType.message}</p>
+            )}
+          </div>
 
-    {/* Quantity */}
-    <div>
-      <label className="label font-semibold">Quantity (kg or portions)</label>
-      <input
-        type="number"
-        className="input input-bordered w-full"
-        {...register("quantity", {
-          required: "Quantity is required",
-          min: { value: 1, message: "Minimum 1 is required" }
-        })}
-        placeholder="e.g., 5"
-      />
-      {errors.quantity && <p className="text-red-500">{errors.quantity.message}</p>}
-    </div>
+          {/* Quantity */}
+          <div>
+            <label className="label font-semibold dark:text-white">
+              Quantity (kg or portions)
+            </label>
+            <input
+              type="number"
+              className="input input-bordered w-full dark:text-white dark:bg-gray-600"
+              {...register("quantity", {
+                required: "Quantity is required",
+                min: { value: 1, message: "Minimum 1 is required" },
+              })}
+              placeholder="e.g., 5"
+            />
+            {errors.quantity && (
+              <p className="text-red-500">{errors.quantity.message}</p>
+            )}
+          </div>
 
-    {/* Pickup Time */}
-    <div>
-      <label className="label font-semibold">Pickup Time Window</label>
-      <input
-        type="text"
-        className="input input-bordered w-full"
-        {...register("pickupTime", { required: "Pickup time is required" })}
-        placeholder="e.g., 4 PM - 6 PM"
-      />
-      {errors.pickupTime && <p className="text-red-500">{errors.pickupTime.message}</p>}
-    </div>
+          {/* Pickup Time */}
+          <div>
+            <label className="label font-semibold dark:text-white">Pickup Time Window</label>
+            <input
+              type="text"
+              className="input input-bordered w-full dark:text-white dark:bg-gray-600"
+              {...register("pickupTime", {
+                required: "Pickup time is required",
+              })}
+              placeholder="e.g., 4 PM - 6 PM"
+            />
+            {errors.pickupTime && (
+              <p className="text-red-500">{errors.pickupTime.message}</p>
+            )}
+          </div>
 
-    {/* Location */}
-    <div className="md:col-span-2">
-      <label className="label font-semibold">Location</label>
-      <input
-        className="input input-bordered w-full"
-        {...register("location", { required: "Location is required" })}
-        placeholder="e.g., 123 Main Street, City"
-      />
-      {errors.location && <p className="text-red-500">{errors.location.message}</p>}
-    </div>
+          {/* Location */}
+          <div className="md:col-span-2">
+            <label className="label font-semibold dark:text-white">Location</label>
+            <input
+              className="input input-bordered w-full dark:text-white dark:bg-gray-600"
+              {...register("location", { required: "Location is required" })}
+              placeholder="e.g., 123 Main Street, City"
+            />
+            {errors.location && (
+              <p className="text-red-500">{errors.location.message}</p>
+            )}
+          </div>
 
-    {/* Image Upload */}
-    <div className="md:col-span-2">
-      <label className="label font-semibold">Image Upload</label>
-      <input
-        type="file"
-        className="file-input file-input-bordered w-full"
-        {...register("image", { required: "Image is required" })}
-      />
-      {errors.image && <p className="text-red-500">{errors.image.message}</p>}
-    </div>
-  </div>
+          {/* Image Upload */}
+          <div className="md:col-span-2 ">
+            <label className="label font-semibold dark:text-white ">Image Upload</label>
+            <input
+              type="file"
+              className="file-input file-input-bordered w-full dark:text-white dark:bg-gray-600"
+              {...register("image", { required: "Image is required" })}
+            />
+            {errors.image && (
+              <p className="text-red-500">{errors.image.message}</p>
+            )}
+          </div>
+        </div>
 
-  <div>
-    <button disabled={loading} className="btn btn-primary w-full">
-      {loading ? "Submitting..." : "Add Donation"}
-    </button>
-  </div>
-</form>
-
+        <div>
+          <button disabled={loading} className="btn btn-primary border-none w-full">
+            {loading ? "Submitting..." : "Add Donation"}
+          </button>
+        </div>
+      </form>
     </div>
   );
 };

@@ -36,11 +36,11 @@ const ManageDonations = () => {
     };
 
     return (
-        <div className=" px-4 py-8">
+        <div className=" px-4 py-8  dark:bg-gray-900 min-h-screen **:dark:text-white">
             <h2 className="lg:text-3xl font-bold mb-6  text-2xl ">Manage Donations</h2>
             <div className="overflow-x-auto p-4 max-w-full">
                 <table className="min-w-full border border-gray-300 rounded-md ">
-                    <thead className="bg-gray-100">
+                    <thead className="bg-gray-100 dark:bg-gray-900">
                         <tr>
                             <th className="p-3 text-left">#</th>
                             <th className="p-3 text-left">Title</th>
@@ -54,7 +54,7 @@ const ManageDonations = () => {
                     </thead>
                     <tbody>
                         {donations.map((donation, index) => (
-                            <tr key={donation._id} className="border-t border-gray-200 hover:bg-gray-50 transition-colors">
+                            <tr key={donation._id} className="border-t border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors">
                                 <td className="p-3">{index + 1}</td>
                                 <td className="p-3">{donation.title}</td>
                                 <td className="p-3 ">{donation.foodType}</td>

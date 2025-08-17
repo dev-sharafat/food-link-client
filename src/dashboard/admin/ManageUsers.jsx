@@ -39,10 +39,10 @@ const ManageUsers = () => {
     }
 
     return (
-        <div className="p-4 overflow-x-auto">
+        <div className="p-4 overflow-x-auto dark:bg-gray-900 min-h-screen **:dark:text-white">
             <h2 className="text-2xl font-semibold lg:text-3xl mb-4">Manage Users</h2>
             <table className="table w-full border border-gray-300">
-                <thead className="bg-base-200">
+                <thead className="bg-base-200 dark:bg-gray-600">
                     <tr>
                         <th>Image</th>
                         <th>Name & Email</th>

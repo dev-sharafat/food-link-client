@@ -7,6 +7,7 @@ import ImpactStats from "../../components/HomeComponents/ImpactStats ";
 import AboutSection from "../../components/HomeComponents/AboutSection";
 import CTASection from "../../components/HomeComponents/CTASection";
 import FAQSection from "../../components/HomeComponents/FAQSection";
+import ShowReviws from "../../components/HomeComponents/ShowReviws";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
         <ImpactStats></ImpactStats>
         <CommunityStories></CommunityStories>
         <CTASection/>
+        <ShowReviws/>
         <FAQSection/>
       </div>
     </>

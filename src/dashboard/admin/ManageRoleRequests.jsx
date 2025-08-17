@@ -40,15 +40,15 @@ const ManageRoleRequests = () => {
     }
 
     return (
-        <div className="p-4 overflow-x-auto">
-            <h2 className="text-2xl font-semibold mb-4">Manage Role Requests</h2>
+        <div className="p-4 overflow-x-auto dark:bg-gray-900 **:dark:text-white min-h-screen">
+            <h2 className="lg:text-3xl text-2xl  font-semibold mb-4">Manage Role Requests</h2>
             <table className="table w-full border border-gray-300">
-                <thead className="bg-gray-100">
+                <thead className="bg-gray-100 dark:bg-gray-600 ">
                     <tr>
                         <th>User Name</th>
                         <th>Email</th>
                         <th>Organization</th>
-                        <th className="hidden sm:table-cell">Mission</th>
+                        <th className="">Mission</th>
                         <th>Transaction ID</th>
                         <th>Status</th>
                         <th>Actions</th>
