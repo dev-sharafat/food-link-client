@@ -54,16 +54,16 @@ const Login = () => {
         <div className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
 
             {/* Form Card */}
-            <div className="relative z-10 w-full max-w-sm backdrop-blur-sm bg-opacity-60 shadow-2xl rounded-lg p-6">
+            <div className="relative z-10 w-full max-w-sm dark:bg-gray-600  backdrop-blur-sm bg-opacity-60 shadow-2xl rounded-lg p-6">
                 <h2 className="text-2xl font-bold text-center mb-4">Login</h2>
 
                 <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
 
                     {/* Email */}
                     <div>
-                        <label className="label">Email</label>
+                        <label className="label dark:text-white ">Email</label>
                         <input
-                            className="input input-bordered w-full"
+                            className="input input-bordered w-full dark:text-black"
                             type="email"
                             {...register("email", {
                                 required: "Email is required",
@@ -79,9 +79,9 @@ const Login = () => {
 
                     {/* Password */}
                     <div>
-                        <label className="label ">Password</label>
+                        <label className="label dark:text-white">Password</label>
                         <input
-                            className="input input-bordered w-full"
+                            className="input input-bordered w-full dark:text-black"
                             type="password"
                             placeholder="Password"
                             {...register("password", {
@@ -101,10 +101,10 @@ const Login = () => {
                     </div>
                     <input className="btn btn-neutral w-full" type="submit" value="Login" />
 
-                    <p className='text-center'>or</p>
+                    <p className='text-center dark:text-white'>or</p>
                     <Social />
 
-                    <p className="text-end pb-6 pr-10">Don&apos;t have Account? <Link to="/register" className="font-bold underline">Create Account</Link> </p>
+                    <p className="text-end pb-6 pr-10 dark:text-white">Don&apos;t have Account? <Link to="/register" className="font-bold underline">Create Account</Link> </p>
                 </form>
             </div>
         </div>

@@ -19,7 +19,7 @@ const Featured = () => {
 
   return (
     <div className="pt-8 md:pt-10 lg:pt-12 xl:pt-14 bg-base-300 dark:bg-gray-600 pb-8 lg:pb-10 xl:pb-14 mt-5 rounded-sm  px-4 md:px-8">
-      <h1 className="text-2xl lg:text-3xl text-center  font-bold dark:text-black"> Featured Food Donations</h1>
+      <h1 className="text-2xl lg:text-3xl text-center  font-bold dark:text-white"> Featured Food Donations</h1>
      <section className="pt-12">
       <div className="container mx-auto px-4">
         {/* Cards Grid */}

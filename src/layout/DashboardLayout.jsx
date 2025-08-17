@@ -31,6 +31,7 @@ const DashboardLayout = () => {
             { name: "Add Donation", path: "/dashboard/restaurant/add-donation" },
             { name: "My Donations", path: "/dashboard/restaurant/my-donations" },
             { name: "Requested Donations", path: "/dashboard/restaurant/requested-donations" },
+            
         ],
         charity: [
             { name: "Charity Profile", path: "/dashboard/charity/profile" },

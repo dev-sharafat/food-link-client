@@ -6,7 +6,8 @@ import LoadingComp from "./../../components/LoadingComp";
 import { FaExternalLinkAlt, FaSearch } from "react-icons/fa";
 import { useState } from "react";
 import { Helmet } from "react-helmet";
-
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 const AllDonations = () => {
   const axiosPublic = useAxiosPublic();
   const [sortOption, setSortOption] = useState(""); 
@@ -70,7 +71,7 @@ const AllDonations = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search by location..."
-              className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 
+              className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-100 dark:border-none dark:bg-gray-600 dark:text-white
                          bg-white shadow-sm focus:ring-2 focus:ring-blue-500 
                          focus:border-blue-500 text-gray-700 transition-all duration-200"
             />
@@ -81,87 +82,93 @@ const AllDonations = () => {
             <select
               value={sortOption}
               onChange={(e) => setSortOption(e.target.value)}
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white shadow-sm 
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white dark:bg-gray-600 dark:text-white dark:border-none shadow-sm 
                          focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700 
                          cursor-pointer hover:border-blue-400 transition-all duration-200"
             >
-              <option value="">✨ Sort By</option>
-              <option value="quantity-asc">⬆️ Quantity (Low → High)</option>
-              <option value="quantity-desc">⬇️ Quantity (High → Low)</option>
-              <option value="pickup-asc">⏳ Pickup Time (Earliest First)</option>
-              <option value="pickup-desc">⌛ Pickup Time (Latest First)</option>
+              <option value="">Sort By</option>
+              <option value="quantity-asc">Quantity (Low → High)</option>
+              <option value="quantity-desc">Quantity (High → Low)</option>
+              <option value="pickup-asc">Pickup Time (Earliest First)</option>
+              <option value="pickup-desc">Pickup Time (Latest First)</option>
             </select>
           </div>
         </div>
 
         {/* Donations Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredDonations.length > 0 ? (
-            filteredDonations.map((donation) => (
-              <div
-                key={donation._id}
-                className="bg-white rounded-xl border border-gray-100 shadow-md 
-                           hover:shadow-lg transition-shadow overflow-hidden flex flex-col"
-              >
-                {/* Image */}
-                <img
-                  src={donation.image}
-                  alt={donation.title}
-                  className="w-full h-48 object-cover"
-                />
+  {filteredDonations.length > 0 ? (
+    filteredDonations.map((donation, index) => (
+      <motion.div
+        key={donation._id}
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        className="bg-white dark:bg-gray-600 dark:text-white rounded-xl shadow-md 
+                   hover:shadow-lg transition-shadow overflow-hidden flex flex-col"
+      >
+        {/* Image */}
+        <img
+          src={donation.image}
+          alt={donation.title}
+          className="w-full h-48 object-cover"
+        />
 
-                {/* Card Content */}
-                <div className="p-4 flex flex-col flex-grow">
-                  <h3 className="text-lg font-semibold mb-1 text-gray-800">{donation.title}</h3>
-                  <p className="text-gray-600 text-sm mb-1">
-                    {donation.restaurantName} - <span className="font-medium">{donation.location}</span>
-                  </p>
+        {/* Card Content */}
+        <div className="p-4 flex flex-col flex-grow">
+          <h3 className="text-lg font-semibold mb-1 dark:text-white text-gray-800">
+            {donation.title}
+          </h3>
+          <p className="text-gray-600 dark:text-white text-sm mb-1">
+            {donation.restaurantName} -{" "}
+            <span className="font-medium">{donation.location}</span>
+          </p>
 
-                  {donation.charityName && (
-                    <p className="text-gray-600 text-sm mb-1">
-                      Charity: {donation.charityName}
-                    </p>
-                  )}
-
-                  <div className="flex items-center justify-between mt-auto mb-4">
-                    {/* Status Badge */}
-                    <span
-                      className={`px-3 py-1 rounded-full text-xs font-medium 
-                      ${
-                        donation.donationStatus === "Available"
-                          ? "bg-green-100 text-green-600"
-                          : donation.donationStatus === "Requested"
-                          ? "bg-yellow-100 text-yellow-600"
-                          : "bg-blue-100 text-blue-600"
-                      }`}
-                    >
-                      {donation.donationStatus}
-                    </span>
-
-                    {/* Quantity */}
-                    <span className="text-sm font-medium text-gray-700">
-                      Qty: {donation.quantity}
-                    </span>
-                  </div>
-
-                  {/* Details Button */}
-                  <Link
-                    to={`/donation/${donation._id}`}
-                    className="mt-auto w-full inline-flex justify-center items-center gap-2 
-                               px-4 py-2 rounded-lg bg-blue-500 text-white font-medium 
-                               hover:bg-blue-600 transition-colors"
-                  >
-                    Details <FaExternalLinkAlt />
-                  </Link>
-                </div>
-              </div>
-            ))
-          ) : (
-            <p className="text-center col-span-full text-gray-500 mt-10 text-lg">
-              ❌ No donations found for "<span className="font-semibold">{searchQuery}</span>"
+          {donation.charityName && (
+            <p className="text-gray-600 text-sm mb-1">
+              Charity: {donation.charityName}
             </p>
           )}
+
+          <div className="flex items-center justify-between mt-auto mb-4">
+            {/* Status Badge */}
+            <span
+              className={`px-3 py-1 rounded-full text-xs font-medium 
+              ${
+                donation.donationStatus === "Available"
+                  ? "bg-green-100 text-green-600"
+                  : donation.donationStatus === "Requested"
+                  ? "bg-yellow-100 text-yellow-600"
+                  : "bg-blue-100 text-blue-600"
+              }`}
+            >
+              {donation.donationStatus}
+            </span>
+
+            {/* Quantity */}
+            <span className="text-sm font-medium dark:text-white text-gray-700">
+              Qty: {donation.quantity}
+            </span>
+          </div>
+
+          {/* Details Button */}
+          <Link
+            to={`/donation/${donation._id}`}
+            className="mt-auto w-full inline-flex justify-center items-center gap-2 
+                       px-4 py-2 rounded-lg bg-blue-500 text-white font-medium 
+                       hover:bg-blue-600 transition-colors"
+          >
+            Details <FaExternalLinkAlt />
+          </Link>
         </div>
+      </motion.div>
+    ))
+  ) : (
+    <p className="text-center col-span-full text-gray-500 mt-10 text-lg">
+      ❌ No donations found for "<span className="font-semibold">{searchQuery}</span>"
+    </p>
+  )}
+</div>
       </div>
     </>
   );

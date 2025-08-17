@@ -16,13 +16,13 @@ const CherityRequest = () => {
     console.log(charityRequests);
 
     return (
-        <section className="section-bottom section-top">
-            <Title title={"New Charity Requests →"}></Title>
+        <section className="section-bottom section-top dark:bg-gray-600 py-10 rounded-sm px-5 lg:py-20 lg:px-10">
+            <h1 className="text-center mb-10 lg:text-3xl md:text-2xl text-2xl  dark:text-white font-bold">New Charity Requests</h1>
             <div className="grid gap-6 md:grid-cols-3 my-6">
                 {charityRequests?.slice(0, 3).map((request) => (
                     <div
                         key={request._id}
-                        className="card bg-base-100 shadow-xl hover:shadow-2xl transition duration-300"
+                        className="card bg-base-100 dark:bg-gray-900 shadow-xl hover:shadow-2xl transition duration-300"
                     >
                         <figure className="px-6 pt-6">
                             {request.image ? (
@@ -38,7 +38,7 @@ const CherityRequest = () => {
                             )}
                         </figure>
 
-                        <div className="card-body items-center text-center">
+                        <div className="card-body items-center text-center dark:text-white">
                             <h3 className="card-title text-xl font-semibold">
                                 {request.organizationName}
                             </h3>

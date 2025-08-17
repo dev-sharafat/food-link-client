@@ -36,18 +36,18 @@ const ManageDonations = () => {
     };
 
     return (
-        <div className="max-w-7xl mx-auto px-4 py-8">
-            <h2 className="text-3xl font-bold mb-6 text-center">Manage Donations</h2>
+        <div className=" px-4 py-8">
+            <h2 className="lg:text-3xl font-bold mb-6  text-2xl ">Manage Donations</h2>
             <div className="overflow-x-auto p-4 max-w-full">
-                <table className="min-w-full border border-gray-300 rounded-md overflow-hidden">
+                <table className="min-w-full border border-gray-300 rounded-md ">
                     <thead className="bg-gray-100">
                         <tr>
                             <th className="p-3 text-left">#</th>
                             <th className="p-3 text-left">Title</th>
-                            <th className="p-3 text-left hidden md:table-cell">Food Type</th>
-                            <th className="p-3 text-left hidden lg:table-cell">Restaurant Name</th>
-                            <th className="p-3 text-left hidden lg:table-cell">Restaurant Email</th>
-                            <th className="p-3 text-left hidden md:table-cell">Quantity</th>
+                            <th className="p-3 text-left">Food Type</th>
+                            <th className="p-3 text-left ">Restaurant Name</th>
+                            <th className="p-3 text-left ">Restaurant Email</th>
+                            <th className="p-3 text-left ">Quantity</th>
                             <th className="p-3 text-left">Status</th>
                             <th className="p-3 text-center">Actions</th>
                         </tr>
@@ -57,10 +57,10 @@ const ManageDonations = () => {
                             <tr key={donation._id} className="border-t border-gray-200 hover:bg-gray-50 transition-colors">
                                 <td className="p-3">{index + 1}</td>
                                 <td className="p-3">{donation.title}</td>
-                                <td className="p-3 hidden md:table-cell">{donation.foodType}</td>
-                                <td className="p-3 hidden lg:table-cell">{donation.restaurantName}</td>
-                                <td className="p-3 hidden lg:table-cell">{donation.restaurantEmail}</td>
-                                <td className="p-3 hidden md:table-cell">{donation.quantity}</td>
+                                <td className="p-3 ">{donation.foodType}</td>
+                                <td className="p-3 ">{donation.restaurantName}</td>
+                                <td className="p-3 ">{donation.restaurantEmail}</td>
+                                <td className="p-3 ">{donation.quantity}</td>
                                 <td className="p-3">
                                     <span
                                         className={`badge badge-sm ${donation.status === "Verified"

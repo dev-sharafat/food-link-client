@@ -4,6 +4,9 @@ import CherityRequest from "../../components/HomeComponents/CherityRequest";
 import CommunityStories from "../../components/HomeComponents/CommunityStories ";
 import Featured from "../../components/HomeComponents/Featured";
 import ImpactStats from "../../components/HomeComponents/ImpactStats ";
+import AboutSection from "../../components/HomeComponents/AboutSection";
+import CTASection from "../../components/HomeComponents/CTASection";
+import FAQSection from "../../components/HomeComponents/FAQSection";
 
 const Home = () => {
   return (
@@ -13,10 +16,13 @@ const Home = () => {
       </Helmet>
       <div className="container-box">
         <Banner />
+        <AboutSection/>
         <Featured />
         <CherityRequest />
         <ImpactStats></ImpactStats>
         <CommunityStories></CommunityStories>
+        <CTASection/>
+        <FAQSection/>
       </div>
     </>
   );

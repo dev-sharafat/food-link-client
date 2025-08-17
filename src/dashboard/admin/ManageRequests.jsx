@@ -27,8 +27,8 @@ const ManageRequests = () => {
     }
 
     return (
-        <div className="max-w-6xl mx-auto p-6 bg-base-100 shadow-md rounded-lg">
-            <h2 className="text-3xl font-bold mb-6 text-center">Manage Requests</h2>
+        <div className="p-6 bg-base-100 shadow-md rounded-lg">
+            <h2 className="text-3xl font-bold mb-6 ">Manage Requests</h2>
 
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">

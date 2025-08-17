@@ -28,8 +28,8 @@ const FeatureDonations = () => {
     }
     return (
         <section className="section-bottom">
-            <h2 className="text-2xl font-bold mb-6 text-center ">Feature Donations</h2>
-            <div className="overflow-x-auto w-full max-w-6xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6 lg:text-3xl ">Feature Donations</h2>
+            <div className="overflow-x-auto w-full ">
                 <table className="table w-full">
                     {/* Head */}
                     <thead>
@@ -43,7 +43,7 @@ const FeatureDonations = () => {
                     </thead>
                     <tbody>
                         {/* Row Example */}
-                        {donations.map((donation) => (
+                        {donations?.map((donation) => (
                             <tr key={donation._id}>
                                 <td>
                                     <div className="w-16 h-16 rounded-lg overflow-hidden">

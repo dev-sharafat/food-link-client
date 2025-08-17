@@ -38,8 +38,8 @@ const Social = () => {
     }
 
     return (
-        <div className='justify-center items-center flex'>
-            <span className='border-l rounded-full pl-2'>Create With</span>
+        <div className='justify-center items-center flex dark:text-white'>
+            <span className='border-l rounded-full pl-2'> Create With</span>
             <div onClick={googleLoginBtn} className='backdrop-blur-4xl text-4xl rounded-full cursor-pointer'>
                 <FcGoogle />
             </div>

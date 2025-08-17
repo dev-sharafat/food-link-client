@@ -1,4 +1,4 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { useForm } from "react-hook-form";
 import { FcGoogle } from 'react-icons/fc';
 import axios from "axios";
@@ -58,7 +58,7 @@ const Registration = () => {
                                 .then(res => {
                                     if (res.data.insertedId) {
                                         toast.success('Account Created Successfully');
-                                        navigate(`${from}`);
+                                        navigate(from || "/");
                                         reset();
                                     }
                                 });
@@ -77,11 +77,11 @@ const Registration = () => {
 
 
     return (
-        <div className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        <div className="relative min-h-[85vh] flex items-center justify-center overflow-hidden ">
 
 
             {/* Form Card */}
-            <div className="relative z-10 w-full max-w-sm backdrop-blur-sm bg-opacity-60 shadow-2xl rounded-lg p-6">
+            <div className="relative z-10 w-full max-w-sm backdrop-blur-sm bg-opacity-60 dark:bg-gray-600 dark:text-white shadow-2xl rounded-lg p-6">
                 <h2 className="text-2xl font-bold text-center mb-4 ">Create Account</h2>
 
                 <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
@@ -89,7 +89,7 @@ const Registration = () => {
                     {/* Name */}
                     <div>
                         <label className="label ">Name</label>
-                        <input className="input input-bordered w-full" {...register("name", { required: "Name is required" })} placeholder='Name' />
+                        <input className="input input-bordered w-full dark:text-black" {...register("name", { required: "Name is required" })} placeholder='Name' />
                         {errors.name && <p className="text-red-500">{errors.name.message}</p>}
                     </div>
 
@@ -97,7 +97,7 @@ const Registration = () => {
                     <div>
                         <label className="label  ">Email</label>
                         <input
-                            className="input input-bordered w-full"
+                            className="input input-bordered w-full dark:text-black"
                             type="email"
                             {...register("email", {
                                 required: "Email is required",
@@ -115,7 +115,7 @@ const Registration = () => {
                     <div>
                         <label className="label  ">Password</label>
                         <input
-                            className="input input-bordered w-full"
+                            className="input input-bordered w-full dark:text-black"
                             type="password"
                             placeholder="Password"
                             {...register("password", {
@@ -140,7 +140,7 @@ const Registration = () => {
                         <input
                             type="file"
                             accept="image/*"
-                            className="file-input file-input-bordered w-full"
+                            className="file-input file-input-bordered w-full dark:text-black"
                             {...register("photo", { required: "Image is required" })}
                         />
                     </div>
