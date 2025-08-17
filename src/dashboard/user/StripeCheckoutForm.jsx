@@ -146,7 +146,7 @@ const CheckoutForm = () => {
                     value={organization}
                     onChange={(e) => setOrganization(e.target.value)}
                     placeholder="Enter your organization name"
-                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800"
+                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-gray-600 text-gray-800"
                 />
             </div>
 
@@ -158,15 +158,15 @@ const CheckoutForm = () => {
                     onChange={(e) => setReason(e.target.value)}
                     placeholder="Write your mission or reason..."
                     rows="4"
-                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800"
+                    className="w-full px-4 py-2 border rounded-md dark:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800"
                 />
             </div>
 
             {/* Stripe Card Input */}
             <div>
-                <label className="block text-sm font-medium mb-1 text-gray-600">Card Information</label>
-                <div className="p-3 rounded-md border">
-                    <CardElement />
+                <label className="block text-sm font-medium mb-1 text-gray-600 dark:text-white">Card Information</label>
+                <div className="p-3 rounded-md border dark:bg-gray-600 dark:text-white">
+                    <CardElement className='dark:text-white' />
                 </div>
             </div>
 

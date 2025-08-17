@@ -47,7 +47,7 @@ const MyReviews = () => {
   if (isLoading) return <LoadingComp />;
 
   return (
-    <div className="min-h-screen  p-6  bg-base-100 rounded-lg shadow-lg">
+    <div className="min-h-screen  p-6  bg-base-100 dark:bg-gray-900 **:dark:text-white rounded-lg shadow-lg">
       <h2 className="text-3xl font-bold mb-6">My Reviews</h2>
 
       {myReviews?.length === 0 ? (
@@ -59,7 +59,7 @@ const MyReviews = () => {
           {myReviews?.map((review) => (
             <div
               key={review._id}
-              className="p-4 rounded-lg border border-base-300 bg-base-200 shadow-md flex flex-col sm:flex-row gap-4"
+              className="p-4 rounded-lg border border-base-300 bg-base-200 shadow-md flex flex-col sm:flex-row gap-4 dark:bg-gray-600"
             >
               {/* Image */}
               <img

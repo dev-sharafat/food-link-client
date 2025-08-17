@@ -30,12 +30,12 @@ const Favorites = () => {
         return <LoadingComp />
     }
     return (
-        <div className="p-6">
-            <h1 className="text-2xl font-bold mb-6">My Favorites</h1>
+        <div className="min-h-screen dark:bg-gray-900 **:dark:text-white p-6">
+            <h1 className="lg:text-4xl text-2xl  font-bold mb-6">My Favorites</h1>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {favorites?.map((item) => (
-                    <div key={item._id} className="card bg-base-100 shadow-xl">
+                    <div key={item._id} className="card bg-base-100 dark:bg-gray-600 shadow-xl">
                         <figure className="h-40">
                             <img src={item.image} alt={item.donationTitle} className="w-full object-cover" />
                         </figure>
