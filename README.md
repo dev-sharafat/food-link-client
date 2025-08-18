@@ -6,7 +6,7 @@ The platform reduces food waste, helps charities collect food, and provides deta
 ---
 
 ## 🌐 Live Project
-[Live Demo Link](https://rad-hamster-5d56ec.netlify.app/)
+[Live Demo Link](https://foodlinkbd.netlify.app/)
 
 ---
 
