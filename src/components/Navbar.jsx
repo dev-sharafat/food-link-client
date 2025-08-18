@@ -69,11 +69,7 @@ const Navbar = () => {
           <MdDashboardCustomize/> Dashboard
         </NavLink>
       </li>
-      <li>
-        {/* <NavLink to="/about" className="flex items-center gap-2">
-          <FaUsers /> About Us
-        </NavLink> */}
-      </li>
+      
     </>
   );
 

@@ -1,4 +1,4 @@
-import { FaGithub } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router";
 import img from "../../src/assets/web-logo.webp";
 const Footer = () => {
@@ -36,31 +36,23 @@ const Footer = () => {
           </a>
 
           <div class="flex mt-4 md:m-0">
-            <div class="-mx-4">
-              <a
-                href="#"
+            <div class="-mx-4 flex">
+              <Link to="www.linkedin.com/in/sharafathassain23"
                 class="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
               >
-                About
-              </a>
-              <a
-                href="#"
+                <FaLinkedinIn />
+              </Link>
+              <Link to="https://github.com/dev-sharafat"
                 class="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
               >
-                Blog
-              </a>
-              <a
-                href="#"
+                <FaGithub />
+              </Link>
+              <Link to="https://www.facebook.com/sharafat.mdsharafat.5000/"
                 class="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
               >
-                News
-              </a>
-              <a
-                href="#"
-                class="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
-              >
-                Contact
-              </a>
+                <FaFacebook />
+              </Link>
+              
             </div>
           </div>
         </div>

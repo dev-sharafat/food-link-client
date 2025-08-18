@@ -16,16 +16,16 @@ const fadeInUp = {
 
 const AboutUs = () => {
   return (
-    <section className="w-full">
+    <section className="w-full dark:bg-gray-900">
       {/* 1. Hero Section */}
       <motion.div
-        className="bg-gradient-to-r from-green-600 to-teal-500 text-white py-20 px-6 text-center"
+        className="  py-20 px-6 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
         <motion.h1
-          className="text-4xl md:text-6xl font-bold mb-4"
+          className="text-2xl md:text-3xl font-bold mb-4"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
