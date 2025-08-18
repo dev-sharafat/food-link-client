@@ -1,44 +1,72 @@
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router";
-
+import img from "../../src/assets/web-logo.webp";
 const Footer = () => {
-    return (
-        <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
-            
-            <nav>
-                <div className="grid grid-flow-col gap-4">
-                    <Link to='https://github.com/dev-sharafat'>
-                       <FaGithub size={30}/>
-                    </Link>
-                    <Link to ='https://www.youtube.com/@mdsharafathassainbinoy9983'>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            className="fill-current">
-                            <path
-                                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-                        </svg>
-                    </Link>
-                    <Link to = 'https://www.facebook.com/sharafat.mdsharafat.5000/'>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            className="fill-current">
-                            <path
-                                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-                        </svg>
-                    </Link>
-                </div>
-            </nav>
-            <aside>
-                <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
-            </aside>
-        </footer>
-    );
+  return (
+    <footer class="flex justify-center px-4 text-gray-800 bg-base-200 dark:text-white dark:bg-gray-900">
+      <div class="container px-6 py-6">
+        <h1 class="text-lg font-bold text-center lg:text-2xl">
+          Join 31,000+ other and never miss <br /> out on new tips, tutorials,
+          and more.
+        </h1>
+
+        <div class="flex flex-col justify-center mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row">
+          <input
+            id="email"
+            type="text"
+            class="px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
+            placeholder="Email Address"
+          />
+
+          <button class=" w-full px-6 py-2.5 text-sm font-medium tracking-wider text-white transition-colors duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-green-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
+            Subscribe
+          </button>
+        </div>
+
+        <hr class="h-px bg-gray-200 border-none my-7 dark:bg-gray-700" />
+
+        <div class="flex flex-col items-center justify-between md:flex-row">
+          <a href="#" className="flex font-bold gap-1">
+            <span className="text-xl">FoodLink</span>
+            <img
+              class="w-auto h-7"
+              src={img}
+              alt=""
+            /> 
+          </a>
+
+          <div class="flex mt-4 md:m-0">
+            <div class="-mx-4">
+              <a
+                href="#"
+                class="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
+              >
+                About
+              </a>
+              <a
+                href="#"
+                class="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
+              >
+                Blog
+              </a>
+              <a
+                href="#"
+                class="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
+              >
+                News
+              </a>
+              <a
+                href="#"
+                class="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

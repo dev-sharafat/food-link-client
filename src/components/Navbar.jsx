@@ -4,6 +4,7 @@ import useAuth from "../hooks/useAuth";
 import { FaHome, FaHandsHelping, FaTachometerAlt, FaUsers } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import UserAvatar from "./useAvatar";
+import { MdDashboardCustomize } from "react-icons/md";
 
 const Navbar = () => {
   const { user } = useAuth();
@@ -65,7 +66,7 @@ const Navbar = () => {
             }`
           }
         >
-          <FaTachometerAlt /> Dashboard
+          <MdDashboardCustomize/> Dashboard
         </NavLink>
       </li>
       <li>
