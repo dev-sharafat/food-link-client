@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/web-logo.webp";
 import useAuth from "../hooks/useAuth";
-import { FaHome, FaHandsHelping, FaTachometerAlt } from "react-icons/fa";
+import { FaHome, FaHandsHelping, FaTachometerAlt, FaUsers } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import UserAvatar from "./useAvatar";
 
@@ -27,19 +27,51 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink to="/" className="flex items-center gap-2">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `flex items-center gap-2 px-3 py-2 rounded-md transition ${
+              isActive
+                ? "bg-primary text-white font-semibold"
+                : "text-gray-700 hover:text-primary dark:text-gray-200"
+            }`
+          }
+        >
           <FaHome /> Home
         </NavLink>
       </li>
       <li>
-        <NavLink to="/all-donations" className="flex items-center gap-2">
+        <NavLink
+          to="/all-donations"
+          className={({ isActive }) =>
+            `flex items-center gap-2 px-3 py-2 rounded-md transition ${
+              isActive
+                ? "bg-primary text-white font-semibold"
+                : "text-gray-700 hover:text-primary dark:text-gray-200"
+            }`
+          }
+        >
           <FaHandsHelping /> All Donations
         </NavLink>
       </li>
       <li>
-        <NavLink to="/dashboard" className="flex items-center gap-2">
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) =>
+            `flex items-center gap-2 px-3 py-2 rounded-md transition ${
+              isActive
+                ? "bg-primary text-white font-semibold"
+                : "text-gray-700 hover:text-primary dark:text-gray-200"
+            }`
+          }
+        >
           <FaTachometerAlt /> Dashboard
         </NavLink>
+      </li>
+      <li>
+        {/* <NavLink to="/about" className="flex items-center gap-2">
+          <FaUsers /> About Us
+        </NavLink> */}
       </li>
     </>
   );

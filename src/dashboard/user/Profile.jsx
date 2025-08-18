@@ -7,7 +7,7 @@ const Profile = () => {
     return (
         <section className="dark:bg-gray-900 min-h-screen **:dark:text-white">
             {/* Header */}
-            <div className="mx-auto px-6 py-10">
+            <div className="lg:max-w-7xl mx-auto px-6 py-10">
                 <div className="flex justify-between items-center mb-8">
                     <h1 className="text-3xl font-bold">My Profile</h1>
                     <button className="btn btn-outline btn-primary gap-2">

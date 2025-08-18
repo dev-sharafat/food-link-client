@@ -27,7 +27,7 @@ const FAQSection = () => {
 
   return (
     <section
-      className="py-20 px-5 md:px-20 dark:bg-gray-800 dark:text-white bg-white text-gray-900"
+      className="py-20 mt-5 px-5 md:px-20 dark:bg-gray-800 dark:text-white bg-white text-gray-900 mb-5 rounded-sm"
     >
       <motion.div
         initial={{ opacity: 0 }}

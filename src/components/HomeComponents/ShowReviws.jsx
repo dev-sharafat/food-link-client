@@ -57,7 +57,7 @@ const ShowReviws  = () => {
   }
 
   return (
-    <section className="py-16 px-5 md:px-20 bg-gray-200  dark:bg-gray-600 dark:text-white">
+    <section className="py-16 px-5 md:px-20 bg-gray-200 rounded-sm  dark:bg-gray-600 dark:text-white">
       <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">
         What Our Users Say
       </h2>

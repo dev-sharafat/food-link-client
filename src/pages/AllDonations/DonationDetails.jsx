@@ -118,7 +118,7 @@ const DonationDetails = () => {
   if (isLoading) return <LoadingComp />;
 
   return (
-    <div className="max-w-4xl mx-auto my-8 p-6 bg-base-100 rounded-lg shadow-lg">
+    <div className="max-w-4xl mx-auto my-8 p-6 bg-base-100 rounded-lg shadow-lg dark:bg-gray-600 **:dark:text-white">
       <div className="flex justify-between items-center">
         <h2 className="text-3xl font-bold mb-6">{donation.title}</h2>
         <div>
@@ -210,9 +210,9 @@ const DonationDetails = () => {
       <div className="mt-8">
         <button
           onClick={() => setIsReviewModalOpen(true)}
-          className="btn btn-outline btn-primary"
+          className="btn btn-outline btn-primary dark:border-none"
         >
-          Submit Comment
+          Submit Review
         </button>
       </div>
 
@@ -272,7 +272,7 @@ const DonationDetails = () => {
             {reviews.map((review) => (
               <div
                 key={review._id}
-                className="bg-base-200 p-4 rounded-lg shadow-sm"
+                className="bg-base-200 p-4 rounded-lg shadow-sm dark:bg-gray-500"
               >
                 <div className="flex items-center gap-3 mb-2">
                   <img

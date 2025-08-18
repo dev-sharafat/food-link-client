@@ -56,7 +56,7 @@ const AllDonations = () => {
       <Helmet>
         <title>Donations | FoodLink</title>
       </Helmet>
-      <div className="section-top section-bottom container mx-auto px-4">
+      <div className="section-top section-bottom container min-h-screen mx-auto px-4">
         <span className="text-center block mb-6">
           <Title title={"Verified Donation Catalogue"} />
         </span>
